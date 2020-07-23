@@ -12,8 +12,8 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "nixos/nixos-20.03-test"
-  config.vm.box_version = "0.0.1"
+  config.vm.box = "nixos/nixos-18.03-x86_64"
+  config.vm.provision :nixos, run: 'always', path: "config.nix"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
